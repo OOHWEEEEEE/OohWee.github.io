@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>OohWee - Puzzle & Casual Games</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:100;
+      backdrop-filter:blur(10px);
+      background:rgba(15,23,42,0.75);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:24px 0;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+      color:#cbd5e1;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      background:
+      radial-gradient(circle at top left,#2563eb 0%,transparent 30%),
+      radial-gradient(circle at bottom right,#9333ea 0%,transparent 30%);
+    }
+
+    .hero-content{
+      padding-top:100px;
+      max-width:700px;
+    }
+
+    .hero h1{
+      font-size:72px;
+      line-height:1.1;
+      margin-bottom:24px;
+    }
+
+    .hero p{
+      color:#cbd5e1;
+      font-size:20px;
+      line-height:1.7;
+      margin-bottom:40px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#3b82f6;
+      padding:16px 34px;
+      border-radius:14px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#2563eb;
+      transform:translateY(-3px);
+    }
+
+    section{
+      padding:120px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:16px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+      font-size:18px;
+    }
+
+    .games-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:28px;
+    }
+
+    .game-card{
+      background:#111827;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.05);
+      transition:0.3s;
+    }
+
+    .game-card:hover{
+      transform:translateY(-8px);
+      border-color:#3b82f6;
+    }
+
+    .game-image{
+      height:220px;
+      background:linear-gradient(135deg,#2563eb,#7c3aed);
+    }
+
+    .game-info{
+      padding:24px;
+    }
+
+    .game-info h3{
+      font-size:24px;
+      margin-bottom:12px;
+    }
+
+    .game-info p{
+      color:#94a3b8;
+      line-height:1.7;
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+    }
+
+    .about-box{
+      background:#111827;
+      border-radius:24px;
+      padding:40px;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    .about-box h3{
+      margin-bottom:16px;
+      font-size:28px;
+    }
+
+    .about-box p{
+      color:#94a3b8;
+      line-height:1.8;
+    }
+
+    footer{
+      border-top:1px solid rgba(255,255,255,0.08);
+      padding:50px 0;
+      text-align:center;
+      color:#94a3b8;
+    }
+
+    footer a{
+      color:#3b82f6;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:48px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .nav-links{
+        gap:18px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+
+    <nav>
+
+      <div class="logo">OohWee</div>
+
+      <div class="nav-links">
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+        <a href="doc/privacy.html">Privacy</a>
+      </div>
+
+    </nav>
+
+  </div>
+</header>
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <h1>Relaxing Puzzle Games for Everyone</h1>
+
+      <p>
+        OohWee creates fun and satisfying puzzle games designed for
+        mobile players around the world. We focus on relaxing gameplay,
+        polished visuals, and enjoyable casual experiences.
+      </p>
+
+      <a class="btn" href="#games">Explore Games</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="games">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Games</h2>
+      <p>Simple gameplay. Endless fun.</p>
+    </div>
+
+    <div class="games-grid">
+
+      <div class="game-card">
+        <div class="game-image"></div>
+
+        <div class="game-info">
+          <h3>Water Sort Puzzle</h3>
+
+          <p>
+            Relaxing color sorting gameplay with smooth animations
+            and satisfying puzzle mechanics.
+          </p>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-image"></div>
+
+        <div class="game-info">
+          <h3>Royal Solitaire</h3>
+
+          <p>
+            A modern solitaire experience with elegant visuals
+            and classic card gameplay.
+          </p>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-image"></div>
+
+        <div class="game-info">
+          <h3>Bubble Match</h3>
+
+          <p>
+            Pop colorful bubbles, solve puzzles,
+            and enjoy relaxing casual challenges.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>About OohWee</h2>
+      <p>Creating relaxing mobile puzzle games worldwide.</p>
+    </div>
+
+    <div class="about">
+
+      <div class="about-box">
+
+        <h3>Our Vision</h3>
+
+        <p>
+          We believe mobile games should be simple, relaxing,
+          and enjoyable for everyone. OohWee focuses on creating
+          polished casual puzzle experiences for global players.
+        </p>
+
+      </div>
+
+      <div class="about-box">
+
+        <h3>Player First</h3>
+
+        <p>
+          We design games with smooth gameplay,
+          intuitive controls, and satisfying progression.
+          Our goal is to create stress-free entertainment
+          that players can enjoy anytime.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="container">
+
+    <p>
+      © 2026 OohWee. All Rights Reserved.
+      |
+      <a href="doc/privacy.html">Privacy Policy</a>
+    </p>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
